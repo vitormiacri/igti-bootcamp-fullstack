@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-size: 20px;
+    }
+
+    .content {
+      max-width: 650px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    .content div {
+      margin: 1rem 0;
+    }
+
+    .input-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .input-container input {
+      margin-left: 1rem;
+    }
+
+    #colors {
+      width: 70%;
+      height: 25vh;
+      background-color: #000000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="content">
+    <h1>IGTI - Trabalho Prático do Módulo 1</h1>
+    <div class="input-container">
+      <label for="">(R) Vermelho:</label>
+      <input type="range" id="range-red" min="0" max="255" step="1" />
+      <input type="text" id="input-red" readonly="readonly" disabled>
+    </div>
+    <div class="input-container">
+      <label for="">(G) Verde:</label>
+      <input type="range" id="range-green" min="0" max="255" step="1" />
+      <input type="text" id="input-green" readonly="readonly" disabled>
+    </div>
+    <div class="input-container">
+      <label for="">(B) Azul:</label>
+      <input type="range" id="range-blue" min="0" max="255" step="1" />
+      <input type="text" id="input-blue" readonly="readonly" disabled>
+    </div>
+    <div id="colors"></div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
