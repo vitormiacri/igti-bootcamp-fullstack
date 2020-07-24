@@ -1,0 +1,14 @@
+{
+  "name": "desafio-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev:server": "live-server --watch=src/index.html,src/index.js,src/styles.css --open=src/index.html",
+    "api": "json-server --watch api.json --port 3001"
+  },
+  "devDependencies": {
+    "json-server": "^0.16.1",
+    "live-server": "^1.2.1"
+  }
+}
