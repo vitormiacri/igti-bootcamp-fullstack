@@ -21,9 +21,6 @@ const intializeValues = () => {
 };
 
 const updateRGBColor = () => {
-  console.log(
-    `rgb(${inputRed.value}, ${inputGreen.value}, ${inputBlue.value});`
-  );
   colorBox.style.backgroundColor = `rgb(${inputRed.value}, ${inputGreen.value}, ${inputBlue.value})`;
 };
 
