@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev:server": "live-server --watch=src/index.html,src/index.js,src/styles.css --open=src/index.html",
+    "start": "live-server --watch=src/index.html,src/index.js,src/styles.css --open=src/index.html",
     "api": "json-server --watch api.json --port 3001"
   },
   "devDependencies": {

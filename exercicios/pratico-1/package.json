@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev:server": "live-server --watch=src/index.html,src/index.js --open=src/index.html"
+    "start": "live-server --watch=src/index.html,src/index.js --open=src/index.html"
   },
   "devDependencies": {
     "live-server": "^1.2.1"
