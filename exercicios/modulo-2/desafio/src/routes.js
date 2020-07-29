@@ -42,11 +42,11 @@ route.put('/grades/:id', async (req, res) => {
   const newGrades = gradesFile.grades.map((grade) => {
     if (grade.id === parseInt(id)) {
       return {
-        id,
-        student,
-        subject,
-        type,
-        value,
+        id: parseInt(id),
+        student: student || grade.student,
+        subject: subject || grade.subject,
+        type: type || grade.type,
+        value: value || grade.value,
         timestamp: grade.timestamp,
       };
     }
