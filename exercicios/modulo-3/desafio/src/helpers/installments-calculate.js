@@ -18,7 +18,7 @@ function calculateInstallments(data) {
   for (let i = 1; i <= period; i++) {
     const amountMonth = round(amount * Math.pow(1 + interest, i));
     const interestMonth = round(amountMonth - amount);
-    const percentMonth = round((interestMonth / amountMonth) * 100);
+    const percentMonth = `${round((interestMonth / amountMonth) * 100)}%`;
     installments.push({
       id: i,
       amountMonth,
