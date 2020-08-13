@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
-import { Container, Results } from './styles';
-import { formattedInstallments } from './helpers/installments';
+import { Container, Results, InstallmentsContent } from './styles';
+import { formattedInstallments } from './helpers/installments-calculate';
 import Input from './components/Input/Input';
+import Installments from './components/Installments/installments';
 import { useEffect } from 'react';
 
 function App() {
@@ -46,6 +47,15 @@ function App() {
           min={1}
         ></Input>
       </Results>
+      <InstallmentsContent>
+        {installments.map((installment) => (
+          <Installments
+            key={installment.id}
+            data={installment}
+            positive={installment.interestMonth < 0}
+          />
+        ))}
+      </InstallmentsContent>
     </Container>
   );
 }
