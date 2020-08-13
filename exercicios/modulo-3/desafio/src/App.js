@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { Container, Results, InstallmentsContent } from './styles';
 import { formattedInstallments } from './helpers/installments-calculate';
 import Input from './components/Input/Input';
 import Installments from './components/Installments/installments';
-import { useEffect } from 'react';
 
 function App() {
   const [amount, setAmount] = useState(1000);
