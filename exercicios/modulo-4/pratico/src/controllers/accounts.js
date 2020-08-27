@@ -1,5 +1,4 @@
 import Account from '../models/account';
-import { Model } from 'mongoose';
 
 class AccountController {
   async deposit(req, res) {
@@ -35,10 +34,10 @@ class AccountController {
       return res.status(400).json({ error: 'Agencia ou conta não encontrada' });
     }
 
-    let newBalance = findAccount.balance - balance;
+    let newBalance = findAccount.balance - balance - 1;
 
     if (newBalance < 0) {
-      newBalance = 0;
+      return res.status(400).json({ error: 'Saldo insuficiente' });
     }
 
     findAccount.balance = newBalance;
