@@ -15,6 +15,10 @@ yarn
 
 Renomeie o arquivo `.env.example` para `.env` e preencha com a URL de acesso do MongDB.
 
+## Iniciando servidor
+
+Execute o comando abaixo
+
 ```bash
 #para iniciar o projeto
 yarn start
@@ -28,4 +32,4 @@ Para facilitar, exportei o arquivo `insomnia-endpoints.json` com todas as requis
 
 ## Documentação
 
-Acesse o endereço `http://localhost:3333/docs` para visualizar a documentação dos endpoints
+Com o servidor iniciado, acesse o endereço `http://localhost:3333/docs` para visualizar a documentação dos endpoints
