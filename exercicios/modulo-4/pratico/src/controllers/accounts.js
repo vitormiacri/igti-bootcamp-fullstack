@@ -150,6 +150,7 @@ class AccountController {
 
   async transferTopBalances(req, res) {
     const findAgencies = await Account.distinct('agencia');
+    let vipAccounts = [];
 
     for (const agency of findAgencies) {
       const findTopAccount = await Account.find({ agencia: agency })
@@ -158,7 +159,13 @@ class AccountController {
 
       const { name, balance, conta } = findTopAccount[0];
 
-      await Account.create({
+      const accountExist = await Account.findOne({
+        agencia: 99,
+        conta: Number(conta),
+      });
+
+      if (!accountExist) {
+        vipAccounts.push({
         agencia: 99,
         name,
         balance,
