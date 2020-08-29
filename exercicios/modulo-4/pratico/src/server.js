@@ -1,3 +1,4 @@
+import dotenv from 'dotenv';
 import express from 'express';
 import mongoose from 'mongoose';
 import swaggerUi from 'swagger-ui-express';
@@ -5,16 +6,15 @@ import swaggerUi from 'swagger-ui-express';
 import { swaggerDocument } from './docs';
 import routes from './routes';
 
+dotenv.config();
+
 const app = express();
 app.use(express.json());
 
-mongoose.connect(
-  'mongodb+srv://<user>:<password>@cluster0.xiikz.mongodb.net/<dbname>?retryWrites=true&w=majority',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+mongoose.connect(process.env.MONGO_DB_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 // app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use(routes);
