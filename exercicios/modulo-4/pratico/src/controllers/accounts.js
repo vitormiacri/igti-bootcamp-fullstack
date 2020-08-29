@@ -166,11 +166,16 @@ class AccountController {
 
       if (!accountExist) {
         vipAccounts.push({
-        agencia: 99,
-        name,
-        balance,
-        conta,
-      });
+          agencia: 99,
+          name,
+          balance,
+          conta,
+        });
+      }
+    }
+
+    if (vipAccounts.length > 0) {
+      await Account.insertMany(vipAccounts);
     }
 
     const findPrivateAgency = await Account.find({ agencia: 99 });
