@@ -16,7 +16,7 @@ mongoose.connect(process.env.MONGO_DB_URL, {
   useUnifiedTopology: true,
 });
 
-// app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use(routes);
 
 app.listen(3333, () => {
