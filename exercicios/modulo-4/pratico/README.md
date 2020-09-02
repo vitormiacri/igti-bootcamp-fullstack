@@ -8,12 +8,14 @@ Baixe o repositório, acesse a pasta `modulo-4/pratico` e rode os comandos:
 
 ```bash
 #para baixar as dependencias
-yarn
+yarn ou npm install
 ```
 
-## Configurando Variáveis de Ambiente
+## Configurando
 
 Renomeie o arquivo `.env.example` para `.env` e preencha com a URL de acesso do MongDB.
+
+Crie uma database e, depois, uma collection com o nome `accounts` e importe o arquivo `accounts.json` nesta collection.
 
 ## Iniciando servidor
 
@@ -21,7 +23,7 @@ Execute o comando abaixo
 
 ```bash
 #para iniciar o projeto
-yarn start
+yarn start ou npm run start
 ```
 
 ## Testando
